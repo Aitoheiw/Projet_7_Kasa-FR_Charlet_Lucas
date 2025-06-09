@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+    font-size: 12px;
+    font-weight: 500;
+    a {
+      text-wrap: nowrap;
+    }
+  }
+}
