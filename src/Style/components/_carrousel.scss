@@ -1,0 +1,27 @@
+.carrousel-container {
+  position: relative;
+  width: 100%;
+  height: 255px;
+}
+
+.carrousel-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carrousel-arrow {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: calc(50% - 12px);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carrousel-arrow-left {
+  left: 10px;
+}
+.carrousel-arrow-right {
+  right: 10px;
+}

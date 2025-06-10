@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-export default function Dropdown({ titre, text }) {
+export default function Dropdown({ titre, text, list, id }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [animationState, setAnimationState] = useState("closed");
@@ -39,7 +39,8 @@ export default function Dropdown({ titre, text }) {
       </div>
       {isMounted && (
         <div className="dropdown-content-mask">
-          <div className={`dropdown-content ${animationState}`}>
+          <div className={`dropdown-content ${animationState}`} id={id}>
+            <ul className="dropdown-list">{list}</ul>
             <p className="dropdown-text">{text}</p>
           </div>
         </div>
