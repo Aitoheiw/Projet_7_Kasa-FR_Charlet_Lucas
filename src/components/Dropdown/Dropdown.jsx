@@ -2,14 +2,16 @@ import { useEffect, useState } from "react";
 export default function Dropdown({ titre, text }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  //   const [isClosing, setIsClosing] = useState(false);
+  const [animationState, setAnimationState] = useState("closed");
 
   useEffect(() => {
     if (isOpen) {
-      //   setIsClosing(false);
       setIsMounted(true);
-    } else if (isMounted) {
-      //   setIsClosing(true);
+      setTimeout(() => {
+        setAnimationState("opened");
+      }, 50);
+    } else {
+      setAnimationState("closing");
       setTimeout(() => {
         setIsMounted(false);
       }, 300);
@@ -35,9 +37,11 @@ export default function Dropdown({ titre, text }) {
           />
         </svg>
       </div>
-      {isOpen && (
-        <div className={`dropdown-content ${isMounted ? "opened" : "closing"}`}>
-          <p className="dropdown-text">{text}</p>
+      {isMounted && (
+        <div className="dropdown-content-mask">
+          <div className={`dropdown-content ${animationState}`}>
+            <p className="dropdown-text">{text}</p>
+          </div>
         </div>
       )}
     </div>
