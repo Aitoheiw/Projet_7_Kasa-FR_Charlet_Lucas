@@ -5,6 +5,7 @@ import Header from "../components/HeaderComponents/Header";
 import Footer from "../components/Footer/Footer";
 import Carrousel from "../components/Carrousel/Carrousel";
 import Dropdown from "../components/Dropdown/Dropdown";
+import Rating from "../components/Rating/Rating";
 
 export default function Logements() {
   const { id } = useParams();
@@ -25,14 +26,6 @@ export default function Logements() {
     fetchLogement();
     console.log(logement);
   }, [id]);
-
-  // useEffect(() => {
-  //   if (isLoading) {
-  //     setTimeout(() => {
-  //       setIsLoading(false);
-  //     }, 300);
-  //   }
-  // }, [isLoading]);
 
   if (!logement) {
     return <Link to="/error" />;
@@ -58,7 +51,7 @@ export default function Logements() {
             </div>
 
             <div className="host-container">
-              <div className="host-rating">{logement.rating} / 5</div>
+              <Rating rating={logement.rating} />
               <div className="host">
                 <img src={logement.host.picture} alt={logement.host.name} />
                 <h3>{logement.host.name}</h3>

@@ -45,17 +45,20 @@
 }
 
 .tags-container {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   padding-bottom: 16px;
   gap: 10px;
+  flex-wrap: wrap;
+  @media screen and (min-width: 1024px) {
+    width: 70%;
+  }
 }
 .tag {
-  min-width: 84px;
   height: 18px;
   display: flex;
-  padding: 2px 0;
+  padding: 2px 29px;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -64,7 +67,6 @@
   color: white;
   font-weight: 700;
   @media screen and (min-width: 1024px) {
-    width: 100%;
     height: 25px;
     font-size: 0.875em;
     border-radius: 10px;
@@ -115,8 +117,25 @@
 }
 
 .host-rating {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
   width: 98px;
   height: 18px;
+  .star-icon {
+    width: 13px;
+    height: 13px;
+    @media screen and (min-width: 1024px) {
+      width: 25px;
+      height: 24px;
+    }
+  }
+  .star-filled path {
+    color: #ff6060;
+  }
+  .star-empty path {
+    fill: #e3e3e3;
+  }
   @media screen and (min-width: 1024px) {
     order: 2;
     width: 196px;
