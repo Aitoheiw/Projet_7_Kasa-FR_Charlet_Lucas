@@ -20,6 +20,12 @@ svg {
   width: 145px;
   height: 46px;
 }
+@media screen and (min-width: 1024px) {
+  svg {
+    width: 210px;
+    height: 68px;
+  }
+}
 
 nav {
   display: flex;
@@ -31,6 +37,12 @@ nav ul {
   gap: 26px;
   font-size: 12px;
   font-weight: 500;
+}
+@media screen and (min-width: 1024px) {
+  nav ul {
+    font-size: 24px;
+    gap: 56px;
+  }
 }
 nav ul a {
   text-wrap: nowrap;
@@ -49,6 +61,13 @@ nav ul a {
   background-repeat: no-repeat;
   border-radius: 10px;
 }
+@media screen and (min-width: 1024px) {
+  .title-card {
+    height: 223px;
+    border-radius: 25px;
+    justify-content: center;
+  }
+}
 .title-card .overlay-home {
   position: absolute;
   inset: 0;
@@ -61,6 +80,11 @@ nav ul a {
   z-index: 0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border: 1px solid #000;
+}
+@media screen and (min-width: 1024px) {
+  .title-card .overlay-home {
+    border-radius: 25px;
+  }
 }
 .title-card .overlay-about {
   position: absolute;
@@ -75,6 +99,11 @@ nav ul a {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border: 1px solid #000;
 }
+@media screen and (min-width: 1024px) {
+  .title-card .overlay-about {
+    border-radius: 25px;
+  }
+}
 .title-card .content {
   position: relative;
   display: flex;
@@ -82,15 +111,31 @@ nav ul a {
   padding-left: 16px;
   z-index: 1;
 }
+@media screen and (min-width: 1024px) {
+  .title-card .content {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
 .title-card .content h1 {
   color: white;
   font-size: 24px;
   font-weight: 700;
 }
+@media screen and (min-width: 1024px) {
+  .title-card .content h1 {
+    font-size: 48px;
+  }
+}
 .title-card .content h2 {
   color: white;
   font-size: 24px;
   font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  .title-card .content h2 {
+    font-size: 48px;
+  }
 }
 
 #about {
@@ -103,11 +148,28 @@ nav ul a {
   flex-wrap: wrap;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .cards-container {
+    flex-direction: row;
+    width: 100%;
+    padding: 50px 50px;
+    background: #f6f6f6;
+    border-radius: 25px;
+    justify-content: space-between;
+    gap: 50px;
+  }
+}
 
 .cards-logements {
   position: relative;
   width: 100%;
   height: 225px;
+}
+@media screen and (min-width: 1024px) {
+  .cards-logements {
+    width: 340px;
+    height: 340px;
+  }
 }
 .cards-logements img {
   width: 100%;
@@ -115,6 +177,12 @@ nav ul a {
   object-fit: cover;
   border-radius: 10px;
   z-index: 0;
+}
+@media screen and (min-width: 1024px) {
+  .cards-logements img {
+    width: 340px;
+    height: 340px;
+  }
 }
 .cards-logements .overlay {
   border-radius: 10px;
@@ -140,12 +208,22 @@ nav ul a {
   width: 100%;
   height: 255px;
 }
+@media screen and (min-width: 1024px) {
+  .carrousel-container {
+    height: 415px;
+  }
+}
 
 .carrousel-img {
   border-radius: 10px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .carrousel-img {
+    border-radius: 25px;
+  }
 }
 
 .carrousel-arrow {
@@ -155,6 +233,28 @@ nav ul a {
   top: calc(50% - 12px);
   cursor: pointer;
   z-index: 2;
+}
+@media screen and (min-width: 1024px) {
+  .carrousel-arrow {
+    height: 79px;
+    width: 47px;
+    top: calc(50% - 39.5px);
+  }
+}
+
+.slide-count {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .slide-count {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    right: calc(50% - 6px);
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
 }
 
 .carrousel-arrow-left {
@@ -174,10 +274,20 @@ nav ul a {
   padding: 0 10px;
   border-radius: 5px;
 }
+@media screen and (min-width: 1024px) {
+  .dropdown-container {
+    height: 52px;
+  }
+}
 .dropdown-container h3 {
   color: white;
   font-size: 13px;
   font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  .dropdown-container h3 {
+    font-size: 24px;
+  }
 }
 .dropdown-container .dropdown-icon {
   width: 32px;
@@ -209,6 +319,11 @@ nav ul a {
   font-size: 12px;
   font-weight: 400;
 }
+@media screen and (min-width: 1024px) {
+  .dropdown-content .dropdown-text {
+    font-size: 18px;
+  }
+}
 .dropdown-content.opened {
   transform: translateY(0);
   opacity: 1;
@@ -232,21 +347,44 @@ header {
   gap: 43px;
   padding: 20px 20px 0 20px;
 }
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 45px 100px 0 100px;
+  }
+}
 
 .main-accueil {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  padding: 27px 20px 27px 20px;
+  padding: 27px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .main-accueil {
+    padding: 50px 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 43px;
+  }
 }
 
 .main-logements {
   padding: 27px 20px;
 }
+@media screen and (min-width: 1024px) {
+  .main-logements {
+    padding: 50px 100px;
+  }
+}
 .main-logements .logement-title {
   font-size: 18px;
   font-weight: 500;
   color: #ff6060;
+}
+@media screen and (min-width: 1024px) {
+  .main-logements .logement-title {
+    font-size: 36px;
+  }
 }
 
 .logement-content {
@@ -254,21 +392,38 @@ header {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1024px) {
+  .logement-content {
+    padding: 30px 0 0 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .logement-head {
   display: flex;
   flex-direction: column;
-  padding-bottom: 10px;
-  gap: 5px;
+  gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .logement-head {
+    padding-bottom: 20px;
+    flex: 1 0 0;
+  }
 }
 
 .logement-location {
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (min-width: 1024px) {
+  .logement-location {
+    font-size: 18px;
+  }
+}
 
 .tags-container {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   padding-bottom: 16px;
@@ -288,6 +443,14 @@ header {
   color: white;
   font-weight: 700;
 }
+@media screen and (min-width: 1024px) {
+  .tag {
+    width: 100%;
+    height: 25px;
+    font-size: 0.875em;
+    border-radius: 10px;
+  }
+}
 
 .host-container {
   display: flex;
@@ -295,6 +458,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 13px;
+}
+@media screen and (min-width: 1024px) {
+  .host-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 21px;
+  }
 }
 
 .host {
@@ -304,17 +474,45 @@ header {
   gap: 10px;
   order: 2;
 }
+@media screen and (min-width: 1024px) {
+  .host {
+    order: 1;
+  }
+}
 .host img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   order: 2;
 }
+@media screen and (min-width: 1024px) {
+  .host img {
+    width: 64px;
+    height: 64px;
+  }
+}
 .host h3 {
   color: #ff6060;
   font-size: 12px;
   font-weight: 500;
   order: 1;
+}
+@media screen and (min-width: 1024px) {
+  .host h3 {
+    font-size: 18px;
+  }
+}
+
+.host-rating {
+  width: 98px;
+  height: 18px;
+}
+@media screen and (min-width: 1024px) {
+  .host-rating {
+    order: 2;
+    width: 196px;
+    height: 36px;
+  }
 }
 
 .logement-dropdown-container {
@@ -351,12 +549,24 @@ header {
 .main-about {
   padding: 19px 19px;
 }
+@media screen and (min-width: 1024px) {
+  .main-about {
+    padding: 38px 100px;
+  }
+}
 
 .drop-down-container {
   padding-top: 19px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .drop-down-container {
+    padding-top: 38px;
+    margin: 0 208px;
+    gap: 30px;
+  }
 }
 
 footer {
@@ -369,6 +579,11 @@ footer .footer-container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container {
+    gap: 28px;
+  }
 }
 footer .footer-container .svg-container {
   display: flex;
@@ -401,11 +616,21 @@ footer .footer-container .footer-content {
   width: 133.594px;
   height: 46px;
 }
+@media screen and (min-width: 1024px) {
+  footer .footer-container .footer-content {
+    width: 100%;
+  }
+}
 footer .footer-container h3 {
   text-align: center;
   color: white;
   font-size: 12px;
   font-weight: 500;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container h3 {
+    font-size: 24px;
+  }
 }
 
 .error-container {
@@ -416,22 +641,49 @@ footer .footer-container h3 {
   align-items: center;
   gap: 113px;
 }
+@media screen and (min-width: 1024px) {
+  .error-container {
+    gap: 139px;
+  }
+}
 .error-container h1 {
   color: #ff6060;
   font-size: 96px;
   font-weight: 700;
   text-align: center;
 }
-.error-container p {
+@media screen and (min-width: 1024px) {
+  .error-container h1 {
+    font-size: 288px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .error-container .error-text-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+.error-container .error-text-container p {
   color: #ff6060;
   font-size: 18px;
   font-weight: 500;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  .error-container .error-text-container p {
+    font-size: 36px;
+  }
+}
 .error-container a {
   font-size: 14px;
   font-weight: 500;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .error-container a {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

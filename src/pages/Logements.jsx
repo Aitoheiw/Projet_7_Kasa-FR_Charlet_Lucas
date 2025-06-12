@@ -48,14 +48,15 @@ export default function Logements() {
             <div className="logement-head">
               <h1 className="logement-title">{logement.title}</h1>
               <p className="logement-location">{logement.location}</p>
+              <div className="tags-container">
+                {logement.tags.map((tag, index) => (
+                  <span className="tag" key={index}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="tags-container">
-              {logement.tags.map((tag, index) => (
-                <span className="tag" key={index}>
-                  {tag}
-                </span>
-              ))}
-            </div>
+
             <div className="host-container">
               <div className="host-rating">{logement.rating} / 5</div>
               <div className="host">
@@ -63,17 +64,17 @@ export default function Logements() {
                 <h3>{logement.host.name}</h3>
               </div>
             </div>
-            <div className="logement-dropdown-container">
-              <Dropdown titre="Description" text={logement.description} />
-              <Dropdown
-                id="equipements"
-                titre="Equipements"
-                text=""
-                list={logement.equipments.map((equipment) => (
-                  <li key={equipment}>{equipment}</li>
-                ))}
-              />
-            </div>
+          </div>
+          <div className="logement-dropdown-container">
+            <Dropdown titre="Description" text={logement.description} />
+            <Dropdown
+              id="equipements"
+              titre="Equipements"
+              text=""
+              list={logement.equipments.map((equipment) => (
+                <li key={equipment}>{equipment}</li>
+              ))}
+            />
           </div>
         </section>
       </main>

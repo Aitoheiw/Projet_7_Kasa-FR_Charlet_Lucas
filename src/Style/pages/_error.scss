@@ -5,23 +5,43 @@
   justify-content: space-between;
   align-items: center;
   gap: 113px;
+  @media screen and (min-width: 1024px) {
+    gap: 139px;
+  }
 
   h1 {
     color: #ff6060;
     font-size: 96px;
     font-weight: 700;
     text-align: center;
+    @media screen and (min-width: 1024px) {
+      font-size: 288px;
+    }
   }
 
-  p {
-    color: #ff6060;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
+  .error-text-container {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+    p {
+      color: #ff6060;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      @media screen and (min-width: 1024px) {
+        font-size: 36px;
+      }
+    }
   }
+
   a {
     font-size: 14px;
     font-weight: 500;
     text-align: center;
+    @media screen and (min-width: 1024px) {
+      font-size: 18px;
+    }
   }
 }

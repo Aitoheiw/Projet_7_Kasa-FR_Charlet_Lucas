@@ -6,10 +6,16 @@
   background: #ff6060;
   padding: 0 10px;
   border-radius: 5px;
+  @media screen and (min-width: 1024px) {
+    height: 52px;
+  }
   h3 {
     color: white;
     font-size: 13px;
     font-weight: 700;
+    @media screen and (min-width: 1024px) {
+      font-size: 24px;
+    }
   }
   .dropdown-icon {
     width: 32px;
@@ -41,6 +47,9 @@
     color: #ff6060;
     font-size: 12px;
     font-weight: 400;
+    @media screen and (min-width: 1024px) {
+      font-size: 18px;
+    }
   }
 
   &.opened {

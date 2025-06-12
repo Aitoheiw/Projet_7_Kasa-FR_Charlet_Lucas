@@ -64,6 +64,9 @@ export default function Carrousel({ id }) {
         alt=""
         className="carrousel-img"
       />
+      <p className="slide-count">
+        {currentSlide + 1} / {logement.pictures.length}
+      </p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
