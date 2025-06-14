@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Error() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className="error-container">
         <h1>404</h1>
         <div className="error-text-container">
@@ -15,7 +15,7 @@ export default function Error() {
 
         <Link to="/">Retourner sur la page d’accueil</Link>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

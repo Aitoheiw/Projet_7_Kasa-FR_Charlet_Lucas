@@ -338,6 +338,11 @@ nav ul a {
   font-size: 12px;
   font-weight: 400;
 }
+@media screen and (min-width: 1024px) {
+  #equipements {
+    font-size: 18px;
+  }
+}
 
 header {
   display: flex;
@@ -403,11 +408,10 @@ header {
 .logement-head {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 @media screen and (min-width: 1024px) {
   .logement-head {
-    padding-bottom: 20px;
+    padding-bottom: 24px;
     flex: 1 0 0;
   }
 }
@@ -433,6 +437,8 @@ header {
 @media screen and (min-width: 1024px) {
   .tags-container {
     width: 70%;
+    padding-top: 20px;
+    padding-bottom: 0;
   }
 }
 
@@ -468,6 +474,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     gap: 21px;
+    padding-right: 3px;
   }
 }
 
@@ -514,6 +521,11 @@ header {
   width: 98px;
   height: 18px;
 }
+@media screen and (min-width: 1024px) {
+  .host-rating {
+    justify-content: flex-end;
+  }
+}
 .host-rating .star-icon {
   width: 13px;
   height: 13px;
@@ -542,6 +554,14 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .logement-dropdown-container {
+    flex-direction: row;
+  }
+  .logement-dropdown-container .container {
+    flex: 1 0 0;
+  }
 }
 
 .loading::after {

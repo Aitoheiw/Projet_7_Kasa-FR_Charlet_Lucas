@@ -6,7 +6,7 @@ import Dropdown from "../components/Dropdown/Dropdown";
 export default function About() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className="main-about">
         <TitleCard id="about" title1="" title2="" classname="overlay-about" />
         <section className="drop-down-container">
@@ -28,7 +28,7 @@ export default function About() {
           />
         </section>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -67,4 +67,7 @@
   padding: 10px 20px 19px 20px;
   font-size: 12px;
   font-weight: 400;
+  @media screen and (min-width: 1024px) {
+    font-size: 18px;
+  }
 }

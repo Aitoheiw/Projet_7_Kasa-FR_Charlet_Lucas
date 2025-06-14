@@ -5,9 +5,9 @@ import MainAcceuil from "../components/MainComponents/MainAccueil";
 export default function Home() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <MainAcceuil />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
