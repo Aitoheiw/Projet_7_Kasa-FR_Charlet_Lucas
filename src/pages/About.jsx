@@ -1,6 +1,6 @@
-import Footer from "../components/Footer/Footer";
-import Header from "../components/HeaderComponents/Header";
-import TitleCard from "../components/MainComponents/TitleCard";
+import Footer from "../layout/footer/Footer";
+import Header from "../layout/header/Header";
+import TitleCard from "../components/MainComponents/titleCard/TitleCard";
 import Dropdown from "../components/Dropdown/Dropdown";
 
 export default function About() {

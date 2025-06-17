@@ -1,5 +1,5 @@
-import Footer from "../components/Footer/Footer";
-import Header from "../components/HeaderComponents/Header";
+import Footer from "../layout/footer/Footer";
+import Header from "../layout/header/Header";
 import { Link } from "react-router-dom";
 
 export default function Error() {

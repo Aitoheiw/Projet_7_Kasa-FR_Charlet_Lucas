@@ -1,24 +1,8 @@
 import { useState } from "react";
+import "./carrousel.scss";
 
 export default function Carrousel({ logementImg }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // const [logement, setLogement] = useState(null);
-
-  // useEffect(() => {
-  //   const fetchLogement = async () => {
-  //     try {
-  //       const response = await fetch(`/data/data.json`);
-  //       const data = await response.json();
-  //       const logementTrouvé = data.find((logement) => logement.id === id);
-  //       setLogement(logementTrouvé);
-  //     } catch (error) {
-  //       console.error("Erreur lors du fetch :", error);
-  //     }
-  //   };
-  //   fetchLogement();
-  //   console.log(logement);
-  // }, [id]);
 
   const handleNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % logementImg.length);

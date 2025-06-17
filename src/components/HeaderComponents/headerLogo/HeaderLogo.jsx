@@ -1,3 +1,4 @@
+import "./headerLogo.scss";
 export default function HEADERLOGO() {
   return (
     <svg

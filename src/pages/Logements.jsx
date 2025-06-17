@@ -33,7 +33,6 @@ export default function Logements() {
 
   return (
     <div className={`logement-container`}>
-      {/* <Header /> */}
       <main className="main-logements">
         <Carrousel id={id} logementImg={logement.pictures} />
         <section>
@@ -71,7 +70,6 @@ export default function Logements() {
           </div>
         </section>
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }

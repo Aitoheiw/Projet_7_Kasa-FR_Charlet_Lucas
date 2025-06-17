@@ -1,5 +1,8 @@
 nav {
   display: flex;
+  a.active {
+    text-decoration: underline;
+  }
   ul {
     display: flex;
     flex-direction: row;

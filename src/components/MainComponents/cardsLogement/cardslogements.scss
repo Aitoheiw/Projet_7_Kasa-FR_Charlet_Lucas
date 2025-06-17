@@ -3,6 +3,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
+  a:hover {
+    text-decoration: none;
+  }
+
   @media screen and (min-width: 1024px) {
     flex-direction: row;
     width: 100%;
@@ -56,4 +60,13 @@
     transform: translateX(50% - 50%);
     z-index: 2;
   }
+}
+
+.cards-title-404 {
+  color: #ff6060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 60px;
 }

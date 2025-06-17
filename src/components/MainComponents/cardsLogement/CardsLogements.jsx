@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./cardsLogements.scss";
 export default function CardsLogements() {
   const [cards, setCards] = useState([]);
 
@@ -33,7 +34,14 @@ export default function CardsLogements() {
           </Link>
         );
       })}
-      <Link to="/error">404</Link>
+      <Link to="/error">
+        {" "}
+        <div className="cards-logements">
+          <div className="overlay"></div>
+
+          <h2 className="cards-title-404">404</h2>
+        </div>
+      </Link>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./dropdown.scss";
 export default function Dropdown({ titre, text, list, id }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);

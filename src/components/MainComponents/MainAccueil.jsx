@@ -1,5 +1,5 @@
-import CardsLogements from "./CardsLogements";
-import TitleCard from "./TitleCard";
+import CardsLogements from "./cardsLogement/CardsLogements";
+import TitleCard from "./titleCard/TitleCard";
 
 export default function Main() {
   return (

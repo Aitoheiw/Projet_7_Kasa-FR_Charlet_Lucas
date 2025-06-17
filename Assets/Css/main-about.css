@@ -1,0 +1,22 @@
+.main-about {
+  padding: 19px 19px;
+}
+@media screen and (min-width: 1024px) {
+  .main-about {
+    padding: 38px 100px;
+  }
+}
+
+.drop-down-container {
+  padding-top: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .drop-down-container {
+    padding-top: 38px;
+    margin: 0 208px;
+    gap: 30px;
+  }
+}/*# sourceMappingURL=main-about.css.map */

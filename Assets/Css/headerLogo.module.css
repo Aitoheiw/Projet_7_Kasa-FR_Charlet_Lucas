@@ -1,0 +1,10 @@
+svg {
+  width: 145px;
+  height: 46px;
+}
+@media screen and (min-width: 1024px) {
+  svg {
+    width: 210px;
+    height: 68px;
+  }
+}/*# sourceMappingURL=headerLogo.module.css.map */
