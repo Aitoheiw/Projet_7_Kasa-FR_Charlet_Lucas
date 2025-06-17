@@ -1,4 +1,4 @@
-import "./titleCard.scss";
+// import "./titleCard.scss";
 export default function TitleCard({ id, title1, title2, classname }) {
   return (
     <section className="title-card" id={id}>

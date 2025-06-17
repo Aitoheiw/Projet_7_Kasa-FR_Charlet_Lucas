@@ -8,6 +8,7 @@ import Error from "./pages/error/Error";
 import "./Style/Css/Main.css";
 import Nav from "./components/headerComponents/nav/Nav";
 import HeaderLogo from "./components/headerComponents/headerLogo/HeaderLogo";
+import "./Style/Css/main-tailwind.css";
 
 function App() {
   return (
