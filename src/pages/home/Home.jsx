@@ -1,7 +1,8 @@
-import CardsLogements from "./cardsLogement/CardsLogements";
-import TitleCard from "./titleCard/TitleCard";
+import TitleCard from "../../components/titleCard/TitleCard";
+import CardsLogements from "../../components/cardsLogement/CardsLogements";
+import "./home.scss";
 
-export default function Main() {
+export default function Home() {
   return (
     <main className="main-accueil">
       <TitleCard

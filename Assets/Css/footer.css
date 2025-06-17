@@ -1,0 +1,63 @@
+footer {
+  width: 100%;
+  padding: 66px 120.313px 58px 121.094px;
+  background-color: black;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container {
+    gap: 28px;
+  }
+}
+footer .footer-container .svg-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 122px;
+}
+footer .footer-container .svg-container #svg1 {
+  width: 31.515px;
+  height: 36.113px;
+}
+footer .footer-container .svg-container #svg2 {
+  width: 26.708px;
+  height: 30.954px;
+}
+footer .footer-container .svg-container #svg3 {
+  width: 22.862px;
+  height: 27.843px;
+}
+footer .footer-container .svg-container #svg4 {
+  width: 23.716px;
+  height: 27.944px;
+}
+footer .footer-container .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 133.594px;
+  height: 46px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container .footer-content {
+    width: 100%;
+  }
+}
+footer .footer-container h3 {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container h3 {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=footer.css.map */

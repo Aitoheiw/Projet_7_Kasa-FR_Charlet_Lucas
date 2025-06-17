@@ -1,12 +1,10 @@
-import Footer from "../layout/footer/Footer";
-import Header from "../layout/header/Header";
-import TitleCard from "../components/MainComponents/titleCard/TitleCard";
-import Dropdown from "../components/Dropdown/Dropdown";
+import TitleCard from "../../components/titleCard/TitleCard";
+import Dropdown from "../../components/dropdown/Dropdown";
+import "./about.scss";
 
 export default function About() {
   return (
-    <div>
-      {/* <Header /> */}
+    <>
       <div className="main-about">
         <TitleCard id="about" title1="" title2="" classname="overlay-about" />
         <section className="drop-down-container">
@@ -28,7 +26,6 @@ export default function About() {
           />
         </section>
       </div>
-      {/* <Footer /> */}
-    </div>
+    </>
   );
 }

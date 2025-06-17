@@ -1,16 +1,14 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-// import Header from "../components/HeaderComponents/Header";
-// import Footer from "../components/Footer/Footer";
-import Carrousel from "../components/Carrousel/Carrousel";
-import Dropdown from "../components/Dropdown/Dropdown";
-import Rating from "../components/Rating/Rating";
+import Carrousel from "../../components/carrousel/Carrousel";
+import Dropdown from "../../components/dropdown/Dropdown";
+import Rating from "../../components/rating/Rating";
+import "./logement.scss";
 
 export default function Logements() {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
-  // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchLogement = async () => {
@@ -32,7 +30,7 @@ export default function Logements() {
   }
 
   return (
-    <div className={`logement-container`}>
+    <>
       <main className="main-logements">
         <Carrousel id={id} logementImg={logement.pictures} />
         <section>
@@ -70,6 +68,6 @@ export default function Logements() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }
