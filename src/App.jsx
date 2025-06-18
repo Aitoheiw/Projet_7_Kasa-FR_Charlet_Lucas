@@ -5,10 +5,10 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Logements from "./pages/logements/Logements";
 import Error from "./pages/error/Error";
-import "./Style/Css/Main.css";
+import "./Style/Css/main-tailwind.css";
+// import "./Style/Css/Main.css";
 import Nav from "./components/headerComponents/nav/Nav";
 import HeaderLogo from "./components/headerComponents/headerLogo/HeaderLogo";
-import "./Style/Css/main-tailwind.css";
 
 function App() {
   return (
