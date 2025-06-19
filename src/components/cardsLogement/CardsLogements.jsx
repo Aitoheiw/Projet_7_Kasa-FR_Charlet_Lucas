@@ -34,14 +34,6 @@ export default function CardsLogements() {
           </Link>
         );
       })}
-      <Link to="/error">
-        {" "}
-        <div className="cards-logements">
-          <div className="overlay"></div>
-
-          <h2 className="cards-title-404">404</h2>
-        </div>
-      </Link>
     </section>
   );
 }

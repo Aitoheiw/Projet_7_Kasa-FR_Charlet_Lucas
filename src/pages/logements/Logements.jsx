@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Carrousel from "../../components/carrousel/Carrousel";
@@ -9,6 +9,7 @@ import "./logement.scss";
 export default function Logements() {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchLogement = async () => {
@@ -16,7 +17,13 @@ export default function Logements() {
         const response = await fetch(`/data/data.json`);
         const data = await response.json();
         const logementTrouvé = data.find((logement) => logement.id === id);
-        setLogement(logementTrouvé);
+        if (!logementTrouvé) {
+          // Si le logement n'est pas trouvé, redirige vers la page d'erreur
+          navigate("*");
+          return;
+        } else {
+          setLogement(logementTrouvé);
+        }
       } catch (error) {
         console.error("Erreur lors du fetch :", error);
       }
@@ -26,7 +33,7 @@ export default function Logements() {
   }, [id]);
 
   if (!logement) {
-    return <Link to="/error" />;
+    return <Link to="*" element={<Error />} />;
   }
 
   return (
