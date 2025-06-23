@@ -6,7 +6,7 @@ import About from "./pages/about/About";
 import Logements from "./pages/logements/Logements";
 import Error from "./pages/error/Error";
 import "./Style/Css/Main.css";
-import Nav from "./components/HeaderComponents/nav/Nav";
+import Nav from "./components/headerComponents/nav/Nav";
 import HeaderLogo from "./components/HeaderComponents/headerLogo/HeaderLogo";
 
 function App() {
