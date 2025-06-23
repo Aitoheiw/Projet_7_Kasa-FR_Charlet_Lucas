@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import "./dropdown.scss";
 export default function Dropdown({ titre, text, list, id }) {
@@ -49,3 +50,9 @@ export default function Dropdown({ titre, text, list, id }) {
     </div>
   );
 }
+Dropdown.propTypes = {
+  titre: PropTypes.string.isRequired, // titre affiché en haut
+  text: PropTypes.string, // texte facultatif sous la liste
+  list: PropTypes.node.isRequired, // élément React (souvent une liste <li>)
+  id: PropTypes.string, // utilisé comme identifiant HTML
+};
