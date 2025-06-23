@@ -1,4 +1,6 @@
 import "./headerLogo.scss";
+
+//Logo Kasa
 export default function HEADERLOGO() {
   return (
     <svg
