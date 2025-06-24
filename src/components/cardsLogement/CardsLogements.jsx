@@ -7,7 +7,9 @@ export default function CardsLogements() {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await fetch("/data/data.json");
+        const response = await fetch(
+          `${import.meta.env.BASE_URL}data/data.json`
+        );
         const data = await response.json();
         setCards(data);
       } catch (error) {

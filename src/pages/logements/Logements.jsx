@@ -14,7 +14,9 @@ export default function Logements() {
   useEffect(() => {
     const fetchLogement = async () => {
       try {
-        const response = await fetch(`/data/data.json`);
+        const response = await fetch(
+          `${import.meta.env.BASE_URL}data/data.json`
+        );
         const data = await response.json();
         const logementTrouvé = data.find((logement) => logement.id === id);
         if (!logementTrouvé) {
