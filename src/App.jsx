@@ -17,9 +17,9 @@ function App() {
         <Nav />
       </Header>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/logement/:id" element={<Logements />} />
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="logement/:id" element={<Logements />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
