@@ -1,0 +1,44 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./cardsLogements.scss";
+
+interface Logement {
+  id: string;
+  cover: string;
+  title: string;
+}
+
+export default function CardsLogements() {
+  const [cards, setCards] = useState<Logement[]>([]);
+
+  useEffect(() => {
+    const fetchCards = async () => {
+      try {
+        const response = await fetch("/data/data.json");
+        const data: Logement[] = await response.json();
+        setCards(data);
+      } catch (error) {
+        console.error("Erreur lors du fetch :", error);
+      }
+    };
+    fetchCards();
+  }, []);
+
+  return (
+    <section className="cards-container">
+      {cards.map((logement) => (
+        <Link to={`/logement/${logement.id}`} key={logement.id}>
+          <div className="cards-logements">
+            <div className="overlay"></div>
+            <img
+              src={logement.cover}
+              alt={logement.title}
+              className="cards-img"
+            />
+            <h2 className="cards-title">{logement.title}</h2>
+          </div>
+        </Link>
+      ))}
+    </section>
+  );
+}

@@ -1,8 +1,12 @@
-import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as fullStar } from "@fortawesome/free-solid-svg-icons";
 
-export default function Rating({ rating }) {
+// Typage des props
+interface RatingProps {
+  rating: number; // nombre d'étoiles entre 0 et 5
+}
+
+export default function Rating({ rating }: RatingProps) {
   const totalStars = 5;
   return (
     <div className="host-rating">
@@ -18,6 +22,3 @@ export default function Rating({ rating }) {
     </div>
   );
 }
-Rating.propTypes = {
-  rating: PropTypes.number.isRequired, // Le nombre d’étoiles (0 à 5)
-};

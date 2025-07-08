@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./nav.scss";
+
 export default function Nav() {
   return (
     <nav>
@@ -7,7 +8,9 @@ export default function Nav() {
         <li>
           <NavLink
             to="/"
-            className={({ isActive }) => (isActive ? "active" : "")}
+            className={({ isActive }: { isActive: boolean }) =>
+              isActive ? "active" : ""
+            }
           >
             ACCUEIL
           </NavLink>
@@ -15,7 +18,9 @@ export default function Nav() {
         <li>
           <NavLink
             to="/about"
-            className={({ isActive }) => (isActive ? "active" : "")}
+            className={({ isActive }: { isActive: boolean }) =>
+              isActive ? "active" : ""
+            }
           >
             A PROPOS
           </NavLink>

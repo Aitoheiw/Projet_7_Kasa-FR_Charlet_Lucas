@@ -1,11 +1,18 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import "./carrousel.scss";
 import ArrowLeft from "./arrowLeft/ArrowLeft";
 import ArrowRight from "./arrowRight/ArrowRight";
 
-export default function Carrousel({ logementImg }) {
-  const [currentSlide, setCurrentSlide] = useState(0);
+interface CarrouselProps {
+  logementImg: string[];
+}
+
+interface ArrowsProps {
+  logementImg: string[];
+}
+
+export default function Carrousel({ logementImg }: CarrouselProps) {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   const handleNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % logementImg.length);
@@ -17,7 +24,7 @@ export default function Carrousel({ logementImg }) {
     );
   };
 
-  function Arrows({ logementImg }) {
+  function Arrows({ logementImg }: ArrowsProps) {
     if (!logementImg || logementImg.length <= 1) return null;
 
     return (
@@ -42,6 +49,3 @@ export default function Carrousel({ logementImg }) {
     </section>
   );
 }
-Carrousel.propTypes = {
-  logementImg: PropTypes.arrayOf(PropTypes.string).isRequired,
-};

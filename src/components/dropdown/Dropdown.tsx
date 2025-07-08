@@ -1,10 +1,20 @@
-import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 import "./dropdown.scss";
-export default function Dropdown({ titre, text, list, id }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  const [animationState, setAnimationState] = useState("closed");
+
+// Typage des props
+interface DropdownProps {
+  titre: string;
+  text?: string;
+  list?: ReactNode;
+  id?: string;
+}
+
+export default function Dropdown({ titre, text, list, id }: DropdownProps) {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+  const [animationState, setAnimationState] = useState<
+    "closed" | "opened" | "closing"
+  >("closed");
 
   useEffect(() => {
     if (isOpen) {
@@ -18,7 +28,7 @@ export default function Dropdown({ titre, text, list, id }) {
         setIsMounted(false);
       }, 300);
     }
-  }, [isOpen, isMounted]);
+  }, [isOpen]);
 
   return (
     <div className="container">
@@ -50,9 +60,3 @@ export default function Dropdown({ titre, text, list, id }) {
     </div>
   );
 }
-Dropdown.propTypes = {
-  titre: PropTypes.string.isRequired, // titre affiché en haut
-  text: PropTypes.string, // texte facultatif sous la liste
-  list: PropTypes.node.isRequired, // élément React (souvent une liste <li>)
-  id: PropTypes.string, // utilisé comme identifiant HTML
-};
