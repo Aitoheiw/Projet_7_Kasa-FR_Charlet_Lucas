@@ -1,4 +1,11 @@
 import PropTypes from "prop-types";
+/**
+ * Componente pour afficher une fl che de navigation vers la droite dans le carrousel
+ *
+ * @param {function} handleNextSlide fonction  appeler lorsque l'utilisateur clique sur la fl che
+ * @returns un  l ment JSX qui affiche la fl che vers la droite
+ */
+
 export default function ArrowRight({ handleNextSlide }) {
   return (
     <svg

@@ -2,6 +2,11 @@ import TitleCard from "../../components/titleCard/TitleCard";
 import Dropdown from "../../components/dropdown/Dropdown";
 import "./about.scss";
 
+/**
+ * The About component renders the About page of the application.
+ * It displays a TitleCard at the top and four dropdown menus below it.
+ * The dropdown menus contain text that explains the values of Kasa.
+ */
 export default function About() {
   return (
     <>

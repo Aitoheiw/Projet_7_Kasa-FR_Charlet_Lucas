@@ -1,36 +1,43 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { getLogementById } from "../../apiServices";
 import Carrousel from "../../components/carrousel/Carrousel";
 import Dropdown from "../../components/dropdown/Dropdown";
 import Rating from "../../components/rating/Rating";
 import "./logement.scss";
 
+/**
+ * Affiche le logement correspondant à l'identifiant donné.
+ *
+ * La page est divisée en 3 parties :
+ * - Un carrousel affichant les photos du logement.
+ * - Un en-tête contenant le titre du logement, sa localisation et ses tags.
+ * - Une section contenant :
+ *   - Les informations sur le propriétaire du logement, son nom, son
+ *     prénom, sa photo et sa note.
+ *   - Un dropdown affichant la description du logement.
+ *   - Un dropdown affichant les équipements du logement.
+ *
+ * @returns {JSX.Element} La page de détail d'un logement.
+ */
 export default function Logements() {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchLogement = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch(`/data/data.json`);
-        const data = await response.json();
-        const logementTrouvé = data.find((logement) => logement.id === id);
-        if (!logementTrouvé) {
-          // Si le logement n'est pas trouvé, redirige vers la page d'erreur
-          navigate("*");
-          return;
-        } else {
-          setLogement(logementTrouvé);
-        }
+        const logementData = await getLogementById(id);
+        setLogement(logementData);
       } catch (error) {
-        console.error("Erreur lors du fetch :", error);
+        console.error("Erreur :", error);
+        navigate("*");
       }
     };
-    fetchLogement();
-    console.log(logement);
-  }, [id]);
+    fetchData();
+  }, [id, navigate]);
 
   if (!logement) {
     return <Link to="*" element={<Error />} />;

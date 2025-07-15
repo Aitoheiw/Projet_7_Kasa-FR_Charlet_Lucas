@@ -1,6 +1,14 @@
 import "./error.scss";
 import { Link } from "react-router-dom";
 
+/**
+ * Page d'erreur 404
+ *
+ * Affiche un message d'erreur 404 avec un lien pour
+ * retourner sur la page d'accueil
+ *
+ * @returns {JSX.Element} Le composant d'erreur 404
+ */
 export default function Error() {
   return (
     <>

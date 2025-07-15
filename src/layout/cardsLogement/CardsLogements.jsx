@@ -1,21 +1,19 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAllLogements } from "../../hook/cardsLogementsHook/useAllLogements";
 import "./cardsLogements.scss";
+/**
+ * Affiche une liste de logements sous forme de cartes
+ *
+ * Les cartes sont générées en fonction des données
+ * contenues dans le fichier JSON /data/data.json
+ *
+ * Chaque carte comprend une image, un titre et un lien
+ * vers la page de détail du logement
+ *
+ * @returns {JSX.Element}
+ */
 export default function CardsLogements() {
-  const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    const fetchCards = async () => {
-      try {
-        const response = await fetch("/data/data.json");
-        const data = await response.json();
-        setCards(data);
-      } catch (error) {
-        console.error("Erreur lors du fetch :", error);
-      }
-    };
-    fetchCards();
-  }, []);
+  const { data: cards } = useAllLogements();
 
   return (
     <section className="cards-container">

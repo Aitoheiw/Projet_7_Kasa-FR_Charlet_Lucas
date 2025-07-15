@@ -4,6 +4,17 @@ import "./carrousel.scss";
 import ArrowLeft from "./arrowLeft/ArrowLeft";
 import ArrowRight from "./arrowRight/ArrowRight";
 
+/**
+ * @description
+ * A carousel component that displays a slideshow of images.
+ *
+ * @prop {array} logementImg - An array of image URLs to display in the
+ *   slideshow.
+ *
+ * @returns {React.ReactElement} A React component that renders a carousel
+ *   slideshow.
+ */
+
 export default function Carrousel({ logementImg }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 

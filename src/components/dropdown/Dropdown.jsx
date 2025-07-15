@@ -1,6 +1,18 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import "./dropdown.scss";
+/**
+ * A dropdown component that displays a title and can be toggled open to reveal
+ * a list of items and a piece of text. The component has a CSS animation that
+ * plays when the dropdown is opened or closed.
+ *
+ * @prop {string} titre - The title displayed above the dropdown.
+ * @prop {string} text - The text displayed below the list of items in the
+ *   dropdown.
+ * @prop {React.ReactNode} list - The list of items displayed in the dropdown.
+ * @prop {string} id - The HTML id attribute for the dropdown content.
+ */
+
 export default function Dropdown({ titre, text, list, id }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);

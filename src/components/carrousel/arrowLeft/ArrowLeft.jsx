@@ -1,4 +1,10 @@
 import PropTypes from "prop-types";
+/**
+ * @function
+ * @description Bouton de navigation vers la diapositive pr c dente dans le carrousel
+ * @param {function} handlePrevSlide - fonction qui sera ex cut e lorsque le bouton est cliqu
+ * @returns {ReactElement} Un bouton SVG qui affichera une fl che pointant vers la gauche
+ */
 export default function ArrowLeft({ handlePrevSlide }) {
   return (
     <svg

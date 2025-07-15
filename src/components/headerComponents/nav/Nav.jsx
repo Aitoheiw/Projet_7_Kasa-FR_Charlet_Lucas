@@ -1,5 +1,12 @@
 import { NavLink } from "react-router-dom";
 import "./nav.scss";
+/**
+ * Composant de navigation principal
+ *
+ * Affiche les liens de navigation dans le header
+ *
+ * @returns {ReactElement} Le composant de navigation
+ */
 export default function Nav() {
   return (
     <nav>
