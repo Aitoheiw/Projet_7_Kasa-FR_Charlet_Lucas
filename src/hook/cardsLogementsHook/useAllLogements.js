@@ -8,16 +8,25 @@ import { getAllLogements } from "../../apiServices";
  */
 export function useAllLogements() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true); // Ajout de l’état loading
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     let isMounted = true;
+    setLoading(true); // On démarre le chargement
+    setError(null); // On réinitialise l'erreur
     getAllLogements()
       .then((result) => {
         if (isMounted) {
           setData(result);
+          setLoading(false); // On arrête le chargement
         }
       })
       .catch((err) => {
+        if (isMounted) {
+          setError(err.message || "Erreur inconnue");
+          setLoading(false);
+        }
         console.error(err);
       });
     return () => {
@@ -25,5 +34,5 @@ export function useAllLogements() {
     };
   }, []);
 
-  return { data };
+  return { data, loading, error };
 }

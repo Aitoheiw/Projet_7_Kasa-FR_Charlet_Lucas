@@ -24,23 +24,37 @@ import "./logement.scss";
 export default function Logements() {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const logementData = await getLogementById(id);
+        if (!logementData) {
+          // Le logement n'existe pas → erreur personnalisée
+          navigate("*");
+          return;
+        }
         setLogement(logementData);
       } catch (error) {
-        console.error("Erreur :", error);
+        console.error(error);
+        // Si erreur API, on redirige
         navigate("*");
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
   }, [id, navigate]);
 
+  if (loading) {
+    return <div className="loader">Chargement du logement…</div>;
+  }
+
+  // Si logement non trouvé, le navigate aura déjà redirigé !
   if (!logement) {
-    return <Link to="*" element={<Error />} />;
+    return null;
   }
 
   return (

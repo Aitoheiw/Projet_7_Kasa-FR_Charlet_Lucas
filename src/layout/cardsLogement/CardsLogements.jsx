@@ -13,7 +13,22 @@ import "./cardsLogements.scss";
  * @returns {JSX.Element}
  */
 export default function CardsLogements() {
-  const { data: cards } = useAllLogements();
+  const { data: cards, loading, error } = useAllLogements();
+
+  if (loading) {
+    // On affiche un loader ou un message d’attente
+    return <div className="loader">Chargement des logements…</div>;
+  }
+
+  if (error) {
+    // On affiche un message d’erreur personnalisé
+    return (
+      <div className="error-message">
+        Oups, une erreur est survenue :<br />
+        <span style={{ color: "#D33" }}>{error}</span>
+      </div>
+    );
+  }
 
   return (
     <section className="cards-container">
